@@ -1,0 +1,26 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source:
+    repository: hstenzel/concourse-builder-img
+
+params:
+  BUILD_ARGS: --no-console
+  PROJECT: concourse-builder-img
+
+inputs:
+- name: src
+
+outputs:
+- name: release
+
+run:
+  dir: src
+  path: bash
+  args:
+  - -cex
+  - |
+    make clean release
+    cp -pr -t ../release release/*

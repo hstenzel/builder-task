@@ -1,0 +1,13 @@
+#!/bin/bash
+# The goal is to do all the environmental setup things in this file,
+# and source the file at the beginning of the pipeline. This will
+# allow the present workarounds and the ability to set variables,
+# run functions, or do other things to make the pipeline look pretty.
+
+unset BASH_ENV
+
+sanitize-cgroups
+img-prep
+
+env
+echo "INFO: Toolchaing Ready" >&2

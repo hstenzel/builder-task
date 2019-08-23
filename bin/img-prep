@@ -1,0 +1,7 @@
+#!/bin/bash
+set -eu
+
+TMPDIR=$(mktemp -d /tmp/img-bootstrap-XXXXXX)
+echo "FROM scratch" > $TMPDIR/Dockerfile
+img build -t img-bootstrap $TMPDIR/ > /dev/null 2>&1
+cp -p $(find /tmp/img-runc* -name runc -type f | head -1) /usr/local/bin/
