@@ -14,7 +14,7 @@ docker:
 # The test is a self-hosted build
 .PHONY: test
 test: docker
-	docker run --privileged -v $(PWD):/src -e PROJECT=$(PROJECT) $(REPOSITORY)/$(PROJECT) "make release"
+	docker run --privileged --rm -v $(PWD):/src -e PROJECT=$(PROJECT) $(REPOSITORY)/$(PROJECT) "make release"
 
 release: DOCKER = img
 release: docker clean
