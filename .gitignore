@@ -1,0 +1,6 @@
+# Ignore dotfiles unless whitelisted
+.*
+!.gitignore
+!.dockerignore
+
+release
