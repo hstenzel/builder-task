@@ -141,6 +141,9 @@ We have boilerplate `platform:` and `image_resource:`.
 'params:` contains the environment variables that the `Makefile` expects, set
 appropriately for CI.
 
+One special environment variable is LOCAL_CA_CERTIFICATE. If this variable is set the cert it
+contains will be honored by all tools in the image, including and especially `img`.
+
 `inputs:` and `outputs:` are similarly natural, with only the source code and the release artifacts.
 
 `run:` boils down to a single build command and a copy of the artifacts to the output directory.

@@ -6,6 +6,7 @@
 
 unset BASH_ENV
 
+update-certificates
 sanitize-cgroups
 img-prep
 

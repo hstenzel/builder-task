@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+if [ -z "$LOCAL_CA_CERTIFICATE" ]
+then
+  echo "INFO: No LOCAL_CA_CERTIFICATE" >&2
+  exit 0
+fi
+
+echo "$LOCAL_CA_CERTIFICATE" > /usr/local/share/ca-certificates/local_ca.crt
+update-ca-certificates
