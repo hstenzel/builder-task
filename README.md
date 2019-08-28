@@ -7,7 +7,7 @@ for the building and saving.
 This repository describes an image which should be used to run a task similar
 to `builder-task.yml`. It is intended to use the project's native build system
 which may itself build the Docker image. In other words, `docker build` is not
-so different than `gcc` in the sense that both may be used to to generate
+so different than `gcc` in the sense that both may be used to generate
 an artifact.
 
 A stretch goal of this is to support running without `privileged: true`, though
@@ -150,8 +150,8 @@ contains will be honored by all tools in the image, including and especially `im
 
 ## Limitations
 
-- This is not entirely YAML driven.
-- Some object to the use of shell at all.
+- This is not entirely YAML driven by design.
+- If the desire is for a pipeline that is entirely described in YAML and does not require a shell, this is not the approach for you.
 - Still requires privileged.
 - Can't switch back to a user inside the container due to Garden.
 
