@@ -61,7 +61,7 @@ straightforward for the pipeline author to deal with the resulting artifacts.
 
 Developers work with this project through `make`.
 
-As a developer is iterating over changes, he makes changes, runs make, repeats.
+As a developer is iterating over changes, he updates code, runs make, repeats.
 This target will `docker build` under the covers; as such it has the lowest
 possible barrier to entry possible, and the target should work on any Docker
 compatible OS.
