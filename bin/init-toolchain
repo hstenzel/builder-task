@@ -10,5 +10,4 @@ update-certificates
 sanitize-cgroups
 img-prep
 
-env
 echo "INFO: Toolchaing Ready" >&2
